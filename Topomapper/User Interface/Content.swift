@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct Content: View {
+    
+    // MARK: - Body
     var body: some View {
         Text("Content")
     }
 }
 
+// MARK: - Preview
 #Preview {
     Content()
 }
