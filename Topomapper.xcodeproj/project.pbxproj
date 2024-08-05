@@ -107,9 +107,10 @@
 		A8B9402B2C604DE000259870 /* Topomapper */ = {
 			isa = PBXGroup;
 			children = (
-				A8B940692C605F3600259870 /* Type Aliases */,
+				A8B9406C2C6067C600259870 /* Extensions */,
 				A8B9402C2C604DE000259870 /* TopomapperApp.swift */,
 				A8B940602C605C1100259870 /* Models */,
+				A8B940692C605F3600259870 /* Type Aliases */,
 				A8B940592C60505A00259870 /* User Interface */,
 				A8B940322C604DE100259870 /* Assets.xcassets */,
 				A8B940372C604DE100259870 /* Topomapper.entitlements */,
@@ -169,6 +170,13 @@
 				A8B9406A2C605F4000259870 /* TypeAliases.swift */,
 			);
 			path = "Type Aliases";
+			sourceTree = "<group>";
+		};
+		A8B9406C2C6067C600259870 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
