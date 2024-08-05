@@ -21,6 +21,7 @@
 		A8B940682C605E7600259870 /* Waypoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B940672C605E7600259870 /* Waypoint.swift */; };
 		A8B9406B2C605F4000259870 /* TypeAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9406A2C605F4000259870 /* TypeAliases.swift */; };
 		A8B9406E2C6067F200259870 /* CLLocationCoordinate2D+Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9406D2C6067F200259870 /* CLLocationCoordinate2D+Protocols.swift */; };
+		A8E130C62C609B0C00F8BD6A /* FeatureCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E130C52C609B0C00F8BD6A /* FeatureCollection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		A8B940672C605E7600259870 /* Waypoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Waypoint.swift; sourceTree = "<group>"; };
 		A8B9406A2C605F4000259870 /* TypeAliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAliases.swift; sourceTree = "<group>"; };
 		A8B9406D2C6067F200259870 /* CLLocationCoordinate2D+Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Protocols.swift"; sourceTree = "<group>"; };
+		A8E130C52C609B0C00F8BD6A /* FeatureCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCollection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 			children = (
 				A8B940612C605C2900259870 /* Route.swift */,
 				A8B940672C605E7600259870 /* Waypoint.swift */,
+				A8E130C52C609B0C00F8BD6A /* FeatureCollection.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				A8B9405D2C60526300259870 /* Detail.swift in Sources */,
 				A8B940682C605E7600259870 /* Waypoint.swift in Sources */,
 				A8B940622C605C2900259870 /* Route.swift in Sources */,
+				A8E130C62C609B0C00F8BD6A /* FeatureCollection.swift in Sources */,
 				A8B9405F2C605BC500259870 /* Content.swift in Sources */,
 				A8B9406E2C6067F200259870 /* CLLocationCoordinate2D+Protocols.swift in Sources */,
 				A8B9402D2C604DE000259870 /* TopomapperApp.swift in Sources */,
