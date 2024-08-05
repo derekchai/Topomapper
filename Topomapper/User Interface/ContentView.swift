@@ -13,7 +13,7 @@ struct ContentView: View {
     // MARK: - Body
     var body: some View {
         NavigationSplitView {
-            Text("Sidebar")
+            Sidebar()
         } detail: {
             Text("Detail")
         }

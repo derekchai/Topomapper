@@ -14,6 +14,7 @@
 		A8B940412C604DE100259870 /* TopomapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B940402C604DE100259870 /* TopomapperTests.swift */; };
 		A8B9404B2C604DE100259870 /* TopomapperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9404A2C604DE100259870 /* TopomapperUITests.swift */; };
 		A8B9404D2C604DE100259870 /* TopomapperUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9404C2C604DE100259870 /* TopomapperUITestsLaunchTests.swift */; };
+		A8B9405B2C60507B00259870 /* Sidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9405A2C60507B00259870 /* Sidebar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		A8B940462C604DE100259870 /* TopomapperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TopomapperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8B9404A2C604DE100259870 /* TopomapperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopomapperUITests.swift; sourceTree = "<group>"; };
 		A8B9404C2C604DE100259870 /* TopomapperUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopomapperUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A8B9405A2C60507B00259870 /* Sidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sidebar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				A8B9402E2C604DE000259870 /* ContentView.swift */,
+				A8B9405A2C60507B00259870 /* Sidebar.swift */,
 			);
 			path = "User Interface";
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8B9402F2C604DE000259870 /* ContentView.swift in Sources */,
+				A8B9405B2C60507B00259870 /* Sidebar.swift in Sources */,
 				A8B9402D2C604DE000259870 /* TopomapperApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
