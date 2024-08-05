@@ -16,20 +16,70 @@ enum WebService {
         )
     )
     
-    /// Fetches and decodes an HTTP response from the given URL into a type which conforms to
-    /// `Codable`.
-    /// - Returns: The decoded response in the given type.
-    static func fetchAndDecodeResponse<T: Codable>(
+    /// Sends an HTTP GET request to a specified URL with optional headers, and 
+    /// decodes the response to a specified Codable type.
+    ///
+    /// - Parameters:
+    ///   - url: The URL to which the GET request is sent.
+    ///   - headers: A dictionary of HTTP headers to include in the request. The 
+    ///   default value is an empty dictionary.
+    ///
+    /// - Throws: An error if the request fails or if the response cannot be decoded 
+    /// to the specified type.
+    ///
+    /// - Returns: The response decoded to the specified Codable type.
+    static func httpGet<T: Codable>(
         from url: URL,
-        httpHeaders: [String: String]?
+        withHeaders headers: [String: String] = [:]
     ) async throws -> T {
-        var urlRequest = URLRequest(url: url)
+        var request = URLRequest(url: url)
         
-        if let httpHeaders {
-            urlRequest.allHTTPHeaderFields = httpHeaders
+        request.allHTTPHeaderFields = headers
+        
+        let (data, response) = try await URLSession.shared.data(for: request)
+        
+        guard let response = response as? HTTPURLResponse else {
+            throw WebServiceError.badResponse
         }
         
-        let (data, response) = try await URLSession.shared.data(for: urlRequest)
+        guard response.statusCode >= 200 && response.statusCode <= 299 else {
+            throw WebServiceError.badStatusCode(code: response.statusCode)
+        }
+        
+        guard let decodedResponse = try? JSONDecoder().decode(T.self, from: data) else {
+            throw WebServiceError.unableToDecodeResponse
+        }
+        
+        logger.info("Decoded response from \(url.absoluteString) with status code \(response.statusCode).")
+        
+        return decodedResponse
+    }
+    
+    /// Sends an HTTP POST request to a specified URL with optional headers and 
+    /// a request body, and decodes the response to a specified Codable type.
+    ///
+    /// - Parameters:
+    ///   - url: The URL to which the POST request is sent.
+    ///   - headers: A dictionary of HTTP headers to include in the request. 
+    ///   The default value is an empty dictionary.
+    ///   - body: The HTTP body data to send with the request.
+    ///
+    /// - Throws: An error if the request fails or if the response cannot be 
+    /// decoded to the specified type.
+    ///
+    /// - Returns: The response decoded to the specified Codable type.
+    static func httpPost<T: Codable>(
+        from url: URL,
+        withHeaders headers: [String: String] = [:],
+        body: Data
+    ) async throws -> T {
+        var request = URLRequest(url: url)
+        
+        request.httpMethod = "POST"
+        request.allHTTPHeaderFields = headers
+        request.httpBody = body
+        
+        let (data, response) = try await URLSession.shared.data(for: request)
         
         guard let response = response as? HTTPURLResponse else {
             throw WebServiceError.badResponse
