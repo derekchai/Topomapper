@@ -17,6 +17,7 @@
 		A8B9405B2C60507B00259870 /* Sidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9405A2C60507B00259870 /* Sidebar.swift */; };
 		A8B9405D2C60526300259870 /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9405C2C60526300259870 /* Detail.swift */; };
 		A8B9405F2C605BC500259870 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9405E2C605BC500259870 /* Content.swift */; };
+		A8B940622C605C2900259870 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B940612C605C2900259870 /* Route.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		A8B9405A2C60507B00259870 /* Sidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sidebar.swift; sourceTree = "<group>"; };
 		A8B9405C2C60526300259870 /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
 		A8B9405E2C605BC500259870 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
+		A8B940612C605C2900259870 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 		A8B940602C605C1100259870 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A8B940612C605C2900259870 /* Route.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				A8B9402F2C604DE000259870 /* ContentView.swift in Sources */,
 				A8B9405B2C60507B00259870 /* Sidebar.swift in Sources */,
 				A8B9405D2C60526300259870 /* Detail.swift in Sources */,
+				A8B940622C605C2900259870 /* Route.swift in Sources */,
 				A8B9405F2C605BC500259870 /* Content.swift in Sources */,
 				A8B9402D2C604DE000259870 /* TopomapperApp.swift in Sources */,
 			);
