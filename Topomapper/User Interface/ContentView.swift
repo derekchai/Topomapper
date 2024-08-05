@@ -14,9 +14,12 @@ struct ContentView: View {
     var body: some View {
         NavigationSplitView {
             Sidebar()
+        } content: {
+            Text("Content")
         } detail: {
             Detail()
         }
+
     }
 }
 
