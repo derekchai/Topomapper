@@ -15,7 +15,7 @@ struct ContentView: View {
         NavigationSplitView {
             Sidebar()
         } content: {
-            Text("Content")
+            Content()
         } detail: {
             Detail()
         }

@@ -16,6 +16,7 @@
 		A8B9404D2C604DE100259870 /* TopomapperUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9404C2C604DE100259870 /* TopomapperUITestsLaunchTests.swift */; };
 		A8B9405B2C60507B00259870 /* Sidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9405A2C60507B00259870 /* Sidebar.swift */; };
 		A8B9405D2C60526300259870 /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9405C2C60526300259870 /* Detail.swift */; };
+		A8B9405F2C605BC500259870 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9405E2C605BC500259870 /* Content.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		A8B9404C2C604DE100259870 /* TopomapperUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopomapperUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A8B9405A2C60507B00259870 /* Sidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sidebar.swift; sourceTree = "<group>"; };
 		A8B9405C2C60526300259870 /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
+		A8B9405E2C605BC500259870 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				A8B9402E2C604DE000259870 /* ContentView.swift */,
+				A8B9405E2C605BC500259870 /* Content.swift */,
 				A8B9405A2C60507B00259870 /* Sidebar.swift */,
 				A8B9405C2C60526300259870 /* Detail.swift */,
 			);
@@ -276,6 +279,7 @@
 				A8B9402F2C604DE000259870 /* ContentView.swift in Sources */,
 				A8B9405B2C60507B00259870 /* Sidebar.swift in Sources */,
 				A8B9405D2C60526300259870 /* Detail.swift in Sources */,
+				A8B9405F2C605BC500259870 /* Content.swift in Sources */,
 				A8B9402D2C604DE000259870 /* TopomapperApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
