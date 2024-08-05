@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import MapKit
 
 struct ContentView: View {
     
@@ -15,7 +16,7 @@ struct ContentView: View {
         NavigationSplitView {
             Sidebar()
         } detail: {
-            Text("Detail")
+            Map()
         }
     }
 }
