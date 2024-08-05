@@ -96,7 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				A8B9402C2C604DE000259870 /* TopomapperApp.swift */,
-				A8B9402E2C604DE000259870 /* ContentView.swift */,
+				A8B940592C60505A00259870 /* User Interface */,
 				A8B940322C604DE100259870 /* Assets.xcassets */,
 				A8B940372C604DE100259870 /* Topomapper.entitlements */,
 				A8B940342C604DE100259870 /* Preview Content */,
@@ -127,6 +127,14 @@
 				A8B9404C2C604DE100259870 /* TopomapperUITestsLaunchTests.swift */,
 			);
 			path = TopomapperUITests;
+			sourceTree = "<group>";
+		};
+		A8B940592C60505A00259870 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				A8B9402E2C604DE000259870 /* ContentView.swift */,
+			);
+			path = "User Interface";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
