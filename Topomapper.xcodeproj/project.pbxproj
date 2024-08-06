@@ -25,6 +25,7 @@
 		A8E130C82C617A0D00F8BD6A /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E130C72C617A0D00F8BD6A /* WebService.swift */; };
 		A8E130D22C61A99A00F8BD6A /* RouteMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E130D12C61A99A00F8BD6A /* RouteMapViewController.swift */; };
 		A8E130D42C61AB4A00F8BD6A /* RouteMapViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E130D32C61AB4A00F8BD6A /* RouteMapViewControllerRepresentable.swift */; };
+		A8E130D82C62CE1A00F8BD6A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A8E130D72C62CE1400F8BD6A /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		A8E130C72C617A0D00F8BD6A /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		A8E130D12C61A99A00F8BD6A /* RouteMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteMapViewController.swift; sourceTree = "<group>"; };
 		A8E130D32C61AB4A00F8BD6A /* RouteMapViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteMapViewControllerRepresentable.swift; sourceTree = "<group>"; };
+		A8E130D72C62CE1400F8BD6A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 		A8B9402B2C604DE000259870 /* Topomapper */ = {
 			isa = PBXGroup;
 			children = (
+				A8E130D72C62CE1400F8BD6A /* .gitignore */,
 				A8B9402C2C604DE000259870 /* TopomapperApp.swift */,
 				A8B940602C605C1100259870 /* Models */,
 				A8B9406C2C6067C600259870 /* Extensions */,
@@ -307,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8B940362C604DE100259870 /* Preview Assets.xcassets in Resources */,
+				A8E130D82C62CE1A00F8BD6A /* .gitignore in Resources */,
 				A8B940332C604DE100259870 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
