@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct Sidebar: View {
+    @State private var numbers = [1,2,3,4,5,6]
     
     // MARK: - Body
     var body: some View {
         List {
             Section("My Routes") {
-                ForEach(0..<20, id: \.self) { number in
-                    Text("Route \(number)")
+                ForEach($numbers, id: \.self, editActions: .move) { number in
+                    Text("Route \(number.wrappedValue)")
                 }
             }
         }
