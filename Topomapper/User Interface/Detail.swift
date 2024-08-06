@@ -12,7 +12,7 @@ struct Detail: View {
     
     // MARK: - Body
     var body: some View {
-        Map()
+        RouteMapViewControllerRepresentable()
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
                     Button("New Route", systemImage: "plus", action: {})
