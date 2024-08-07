@@ -13,6 +13,7 @@ struct Sidebar: View {
     @Binding var selectedRoute: Route?
     
     // MARK: - Internal Properties
+    @Environment(\.modelContext) private var modelContext
     @Query(sort: \Route.creationDate) private var userRoutes: [Route]
     
     // MARK: - Body
@@ -37,9 +38,23 @@ struct Sidebar: View {
                 .disabled(selectedRoute == nil)
             }
             ToolbarItem(placement: .primaryAction) {
-                Button("New Route", systemImage: "plus", action: {})
+                Button("New Route", systemImage: "plus", action: createNewRoute)
             }
         }
+    }
+}
+
+// MARK: - Actions
+extension Sidebar {
+    /// Creates a new empty ``Route`` and inserts it into the model context.
+    private func createNewRoute() {
+        let route = Route(
+            name: "New Route",
+            creationDate: Date(),
+            userDescription: "",
+            waypoints: []
+        )
+        modelContext.insert(route)
     }
 }
 
