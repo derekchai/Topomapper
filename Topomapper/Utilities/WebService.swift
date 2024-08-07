@@ -55,8 +55,8 @@ enum WebService {
         return decodedResponse
     }
     
-    /// Sends an HTTP POST request to a specified URL with optional headers and 
-    /// a request body, and decodes the response to a specified Codable type.
+    /// Sends an HTTP POST request to a specified URL with optional headers 
+    /// and a request body, and returns the response data.
     ///
     /// - Parameters:
     ///   - url: The URL to which the POST request is sent.
@@ -64,15 +64,12 @@ enum WebService {
     ///   The default value is an empty dictionary.
     ///   - body: The HTTP body data to send with the request.
     ///
-    /// - Throws: An error if the request fails or if the response cannot be 
-    /// decoded to the specified type.
-    ///
-    /// - Returns: The response decoded to the specified Codable type.
-    static func httpPost<T: Codable>(
+    /// - Returns: The response data.
+    static func httpPost(
         from url: URL,
         withHeaders headers: [String: String] = [:],
         body: Data
-    ) async throws -> T {
+    ) async throws -> Data {
         var request = URLRequest(url: url)
         
         request.httpMethod = "POST"
@@ -89,13 +86,7 @@ enum WebService {
             throw WebServiceError.badStatusCode(code: response.statusCode)
         }
         
-        guard let decodedResponse = try? JSONDecoder().decode(T.self, from: data) else {
-            throw WebServiceError.unableToDecodeResponse
-        }
-        
-        logger.info("Decoded response from \(url.absoluteString) with status code \(response.statusCode).")
-        
-        return decodedResponse
+        return data
     }
     
     enum WebServiceError: Error {
