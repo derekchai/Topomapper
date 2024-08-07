@@ -24,7 +24,7 @@ struct ContentView: View {
             }
         } detail: {
             if let selectedRoute {
-                Text(selectedRoute.name)
+                Detail()
             } else {
                 Text("No Route Selected")
             }
