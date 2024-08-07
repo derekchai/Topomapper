@@ -17,8 +17,13 @@ struct Detail: View {
         RouteMapViewControllerRepresentable()
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
-                    Button("Edit Route path", systemImage: "point.topright.arrow.triangle.backward.to.point.bottomleft.scurvepath", action: {})
-                        .popoverTip(editRoutePathTip, arrowEdge: .bottom)
+                    Button(
+                        action: {},
+                        label: {
+                            Label("Edit Route path", image: "path.edit")
+                        }
+                    )
+                    .popoverTip(editRoutePathTip, arrowEdge: .bottom)
                 }
             }
     }
@@ -34,7 +39,7 @@ struct EditRoutePathTip: Tip {
     }
     
     var image: Image? {
-        Image(systemName: "point.topright.arrow.triangle.backward.to.point.bottomleft.scurvepath")
+        Image("path.edit")
     }
 }
 
