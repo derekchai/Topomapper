@@ -19,12 +19,7 @@ class DataController {
         do {
             let container = try ModelContainer(for: schema, configurations: [modelConfiguration])
             
-            for i in 1...10 {
-                let route = Route(name: "Route \(i)", creationDate: Date(), waypoints: [])
-                
-                container.mainContext.insert(route)
-            }
-            
+            container.mainContext.insert(Route.tongariroCrossing)
             container.mainContext.insert(Route.angelusHut)
             
             return container
