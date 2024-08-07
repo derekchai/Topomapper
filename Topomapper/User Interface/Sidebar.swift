@@ -19,7 +19,7 @@ struct Sidebar: View {
                     NavigationLink {
                         Text(route.name)
                     } label: {
-                        TextField("Title key", text: Bindable(route).name)
+                        TextField("Route name", text: Bindable(route).name)
                     }
                 }
             }
