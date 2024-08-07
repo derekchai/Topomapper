@@ -40,6 +40,15 @@ import CoreLocation
 }
 
 extension Route {
+    /// Initializes a ``Route`` from ``GeoJSONFeatureCollection.Feature.Geometry``.
+    ///
+    /// This initializer calculates the distance from start and grade of each
+    /// point.
+    /// - Parameters:
+    ///   - geometry: The GeoJSON geometry to create this ``Route`` from.
+    ///   - name: The name of the ``Route``.
+    ///   - creationDate: The creation date of the ``Route``.
+    ///   - userDescription: An optional description of the ``Route``.
     convenience init(
         from geometry: GeoJSONFeatureCollection.Feature.Geometry,
         name: String,
