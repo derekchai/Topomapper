@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Charts
 
 struct Content: View {
     // MARK: - Exposed Properties
@@ -22,6 +23,20 @@ struct Content: View {
                 Text("\(route.waypoints.count) waypoints")
                     .font(.footnote)
                     .foregroundStyle(.secondary)
+                
+                if #available(macOS 15.0, *) {
+                    Chart {
+                        LinePlot(
+                            route.waypoints,
+                            x:
+                                    .value(
+                                        "Distance from start",
+                                        \.distanceFromStart
+                                    ),
+                            y: .value("Elevation", \.elevation)
+                        )
+                    }
+                }
             }
         }
         .navigationTitle(route.name)
