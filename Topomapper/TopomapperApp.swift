@@ -27,6 +27,7 @@ struct TopomapperApp: App {
         WindowGroup {
             ContentView()
         }
-        .modelContainer(sharedModelContainer)
+//        .modelContainer(sharedModelContainer)
+        .modelContainer(DataController.previewModelContainer)
     }
 }
