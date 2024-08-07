@@ -20,7 +20,7 @@ struct Sidebar: View {
             Section("My Routes") {
                 ForEach($routes, id: \.self, editActions: .move) { $route in
                     NavigationLink {
-                        Text("Destination \(route)")
+                        Text("Destination \(route.name)")
                     } label: {
                         TextField(text: $route.name) {}
                     }
