@@ -27,6 +27,15 @@ struct Sidebar: View {
             }
         }
         .toolbar {
+            ToolbarItem(placement: .destructiveAction) {
+                Button(
+                    "Delete selected Route",
+                    systemImage: "trash",
+                    role: .destructive,
+                    action: {
+                    })
+                .disabled(selectedRoute == nil)
+            }
             ToolbarItem(placement: .primaryAction) {
                 Button("New Route", systemImage: "plus", action: {})
             }
