@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import TipKit
 
 @main
 struct TopomapperApp: App {
@@ -26,6 +27,19 @@ struct TopomapperApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .task {
+                    // Configure and load your tips at app launch.
+                    do {
+                        try Tips.configure([
+                            .displayFrequency(.immediate),
+                            .datastoreLocation(.applicationDefault)
+                        ])
+                    }
+                    catch {
+                        // Handle TipKit errors
+                        print("Error initializing TipKit \(error.localizedDescription)")
+                    }
+                }
         }
 //        .modelContainer(sharedModelContainer)
         .modelContainer(DataController.previewModelContainer)
