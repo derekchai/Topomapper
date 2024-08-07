@@ -8,14 +8,17 @@
 import SwiftUI
 
 struct Content: View {
+    // MARK: - Exposed Properties
+    let route: Route
     
     // MARK: - Body
     var body: some View {
         Text("Content")
+            .navigationTitle(route.name)
     }
 }
 
 // MARK: - Preview
 #Preview {
-    Content()
+//    Content()
 }

@@ -18,7 +18,7 @@ struct ContentView: View {
             Sidebar(selectedRoute: $selectedRoute)
         } content: {
             if let selectedRoute {
-                Text(selectedRoute.name)
+                Content(route: selectedRoute)
             } else {
                 Text("No Route Selected")
             }
