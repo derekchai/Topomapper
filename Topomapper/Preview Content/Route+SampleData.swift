@@ -16,18 +16,13 @@ extension Route {
         let decoder = GeoJSONDecoder()
         let geoJSON = decoder.decode(data)!
         
-        return Route(
+        let route = Route(
+            from: geoJSON.features.first!.geometry,
             name: "St. Arnaud to Angelus Hut",
             creationDate: Date(),
-            userDescription: "A hike from the town of St. Arnaud to Angelus Hut via the Cascade Route.",
-            waypoints: geoJSON.features.first!.geometry.coordinates.map {
-                Waypoint(
-                    coordinate: CLLocationCoordinate2D(latitude: $0[1], longitude: $0[0]),
-                    grade: 0,
-                    elevation: $0[2],
-                    distanceFromStart: 0
-                )
-            }
+            userDescription: "A hike from the town of St. Arnaud to Angelus Hut via the Cascade Route."
         )
+        
+        return route
     }
 }
