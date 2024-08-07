@@ -17,26 +17,30 @@ struct Content: View {
         NavigationStack {
             List {
                 if let description = route.userDescription {
-                    Text(description)
+                    Section("Description") {
+                        Text(description)
+                    }
+                }
+                
+                if #available(macOS 15.0, *) {
+                    Section("Elevation Profile") {
+                        Chart {
+                            LinePlot(
+                                route.waypoints,
+                                x:
+                                        .value(
+                                            "Distance from start",
+                                            \.distanceFromStart
+                                        ),
+                                y: .value("Elevation", \.elevation)
+                            )
+                        }
+                    }
                 }
                 
                 Text("\(route.waypoints.count) waypoints")
                     .font(.footnote)
                     .foregroundStyle(.secondary)
-                
-                if #available(macOS 15.0, *) {
-                    Chart {
-                        LinePlot(
-                            route.waypoints,
-                            x:
-                                    .value(
-                                        "Distance from start",
-                                        \.distanceFromStart
-                                    ),
-                            y: .value("Elevation", \.elevation)
-                        )
-                    }
-                }
             }
         }
         .navigationTitle(route.name)
