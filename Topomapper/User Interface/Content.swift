@@ -10,14 +10,19 @@ import Charts
 
 struct Content: View {
     // MARK: - Exposed Properties
-    let route: Route
+    @Binding var route: Route
     
     // MARK: - Body
     var body: some View {
         NavigationStack {
             List {
                 Section("Description") {
-                    
+                    TextField(
+                        "Description",
+                        text: $route.userDescription,
+                        prompt: Text("Enter a description for this Route"),
+                        axis: .vertical
+                    )
                 }
                 
                 if #available(macOS 15.0, *) {
@@ -47,5 +52,5 @@ struct Content: View {
 
 // MARK: - Preview
 #Preview {
-    Content(route: Route.angelusHut)
+    Content(route: .constant(Route.angelusHut))
 }

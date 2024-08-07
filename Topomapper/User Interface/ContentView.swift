@@ -17,13 +17,13 @@ struct ContentView: View {
         NavigationSplitView {
             Sidebar(selectedRoute: $selectedRoute)
         } content: {
-            if let selectedRoute {
-                Content(route: selectedRoute)
+            if selectedRoute != nil {
+                Content(route: Binding($selectedRoute)!)
             } else {
                 Text("No Route Selected")
             }
         } detail: {
-            if let selectedRoute {
+            if selectedRoute != nil {
                 Detail()
             } else {
                 Text("No Route Selected")
