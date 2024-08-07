@@ -21,7 +21,7 @@
 		A8B940682C605E7600259870 /* Waypoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B940672C605E7600259870 /* Waypoint.swift */; };
 		A8B9406B2C605F4000259870 /* TypeAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9406A2C605F4000259870 /* TypeAliases.swift */; };
 		A8B9406E2C6067F200259870 /* CLLocationCoordinate2D+Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9406D2C6067F200259870 /* CLLocationCoordinate2D+Protocols.swift */; };
-		A8E130C62C609B0C00F8BD6A /* FeatureCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E130C52C609B0C00F8BD6A /* FeatureCollection.swift */; };
+		A8E130C62C609B0C00F8BD6A /* GeoJSONFeatureCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E130C52C609B0C00F8BD6A /* GeoJSONFeatureCollection.swift */; };
 		A8E130C82C617A0D00F8BD6A /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E130C72C617A0D00F8BD6A /* WebService.swift */; };
 		A8E130D22C61A99A00F8BD6A /* RouteMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E130D12C61A99A00F8BD6A /* RouteMapViewController.swift */; };
 		A8E130D42C61AB4A00F8BD6A /* RouteMapViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E130D32C61AB4A00F8BD6A /* RouteMapViewControllerRepresentable.swift */; };
@@ -69,7 +69,7 @@
 		A8B940672C605E7600259870 /* Waypoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Waypoint.swift; sourceTree = "<group>"; };
 		A8B9406A2C605F4000259870 /* TypeAliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAliases.swift; sourceTree = "<group>"; };
 		A8B9406D2C6067F200259870 /* CLLocationCoordinate2D+Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Protocols.swift"; sourceTree = "<group>"; };
-		A8E130C52C609B0C00F8BD6A /* FeatureCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCollection.swift; sourceTree = "<group>"; };
+		A8E130C52C609B0C00F8BD6A /* GeoJSONFeatureCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoJSONFeatureCollection.swift; sourceTree = "<group>"; };
 		A8E130C72C617A0D00F8BD6A /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		A8E130D12C61A99A00F8BD6A /* RouteMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteMapViewController.swift; sourceTree = "<group>"; };
 		A8E130D32C61AB4A00F8BD6A /* RouteMapViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteMapViewControllerRepresentable.swift; sourceTree = "<group>"; };
@@ -188,7 +188,7 @@
 			children = (
 				A8B940612C605C2900259870 /* Route.swift */,
 				A8B940672C605E7600259870 /* Waypoint.swift */,
-				A8E130C52C609B0C00F8BD6A /* FeatureCollection.swift */,
+				A8E130C52C609B0C00F8BD6A /* GeoJSONFeatureCollection.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -371,7 +371,7 @@
 				A8E130E42C6309FC00F8BD6A /* Route+SampleData.swift in Sources */,
 				A8E130DA2C62CE2F00F8BD6A /* Key.swift in Sources */,
 				A8E130D22C61A99A00F8BD6A /* RouteMapViewController.swift in Sources */,
-				A8E130C62C609B0C00F8BD6A /* FeatureCollection.swift in Sources */,
+				A8E130C62C609B0C00F8BD6A /* GeoJSONFeatureCollection.swift in Sources */,
 				A8E130E22C62FF0000F8BD6A /* DataController.swift in Sources */,
 				A8B9405F2C605BC500259870 /* Content.swift in Sources */,
 				A8B9406E2C6067F200259870 /* CLLocationCoordinate2D+Protocols.swift in Sources */,

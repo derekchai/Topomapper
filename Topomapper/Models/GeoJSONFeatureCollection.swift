@@ -13,7 +13,7 @@ import CoreLocation
 ///
 /// For more information about the GeoJSON standard, see the [GeoJSON Specification
 /// (RFC 7946)](https://datatracker.ietf.org/doc/html/rfc7946).
-struct FeatureCollection: Codable {
+struct GeoJSONFeatureCollection: Codable {
     let features: [Feature]
     
     struct Feature: Codable {
