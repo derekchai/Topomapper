@@ -16,10 +16,8 @@ struct Content: View {
     var body: some View {
         NavigationStack {
             List {
-                if let description = route.userDescription {
-                    Section("Description") {
-                        Text(description)
-                    }
+                Section("Description") {
+                    
                 }
                 
                 if #available(macOS 15.0, *) {

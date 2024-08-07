@@ -18,8 +18,8 @@ import CoreLocation
     /// The ``Date`` on which this ``Route`` was created.
     var creationDate: Date
     
-    /// An optional description for this ``Route``.
-    var userDescription: String?
+    /// A description for this ``Route``.
+    var userDescription: String
     
     /// An array of ``Waypoint``s representing the path which
     /// this ``Route`` takes.
@@ -29,7 +29,7 @@ import CoreLocation
     init(
         name: String,
         creationDate: Date,
-        userDescription: String? = nil,
+        userDescription: String = "",
         waypoints: [Waypoint]
     ) {
         self.name = name
@@ -53,7 +53,7 @@ extension Route {
         from geometry: GeoJSONFeatureCollection.Feature.Geometry,
         name: String,
         creationDate: Date,
-        userDescription: String? = nil
+        userDescription: String = ""
     ) {
         let coordinates = geometry.coordinates
         
