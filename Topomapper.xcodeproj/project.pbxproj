@@ -27,6 +27,7 @@
 		A8E130D42C61AB4A00F8BD6A /* RouteMapViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E130D32C61AB4A00F8BD6A /* RouteMapViewControllerRepresentable.swift */; };
 		A8E130D82C62CE1A00F8BD6A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A8E130D72C62CE1400F8BD6A /* .gitignore */; };
 		A8E130DA2C62CE2F00F8BD6A /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E130D92C62CE2F00F8BD6A /* Key.swift */; };
+		A8E130E22C62FF0000F8BD6A /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E130E12C62FF0000F8BD6A /* DataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		A8E130D32C61AB4A00F8BD6A /* RouteMapViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteMapViewControllerRepresentable.swift; sourceTree = "<group>"; };
 		A8E130D72C62CE1400F8BD6A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		A8E130D92C62CE2F00F8BD6A /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
+		A8E130E12C62FF0000F8BD6A /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				A8B940352C604DE100259870 /* Preview Assets.xcassets */,
+				A8E130E12C62FF0000F8BD6A /* DataController.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				A8E130DA2C62CE2F00F8BD6A /* Key.swift in Sources */,
 				A8E130D22C61A99A00F8BD6A /* RouteMapViewController.swift in Sources */,
 				A8E130C62C609B0C00F8BD6A /* FeatureCollection.swift in Sources */,
+				A8E130E22C62FF0000F8BD6A /* DataController.swift in Sources */,
 				A8B9405F2C605BC500259870 /* Content.swift in Sources */,
 				A8B9406E2C6067F200259870 /* CLLocationCoordinate2D+Protocols.swift in Sources */,
 				A8E130D42C61AB4A00F8BD6A /* RouteMapViewControllerRepresentable.swift in Sources */,

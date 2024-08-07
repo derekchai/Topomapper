@@ -6,23 +6,20 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct Sidebar: View {
-    @State private var routes = [
-        Route(name: "Route A", creationDate: Date(), waypoints: []),
-        Route(name: "Route B", creationDate: Date(), waypoints: []),
-        Route(name: "Route C", creationDate: Date(), waypoints: []),
-    ]
+    @Query(sort: \Route.creationDate) private var userRoutes: [Route]
     
     // MARK: - Body
     var body: some View {
         List {
             Section("My Routes") {
-                ForEach($routes, id: \.self, editActions: .move) { $route in
+                ForEach(userRoutes) { route in
                     NavigationLink {
-                        Text("Destination \(route.name)")
+                        Text(route.name)
                     } label: {
-                        TextField(text: $route.name) {}
+                        TextField("Title key", text: Bindable(route).name)
                     }
                 }
             }
@@ -33,4 +30,5 @@ struct Sidebar: View {
 // MARK: - Preview
 #Preview {
     Sidebar()
+        .modelContainer(DataController.previewModelContainer)
 }

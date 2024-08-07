@@ -25,4 +25,5 @@ struct ContentView: View {
 // MARK: - Preview
 #Preview {
     ContentView()
+        .modelContainer(DataController.previewModelContainer)
 }
