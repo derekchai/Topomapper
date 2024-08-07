@@ -25,6 +25,8 @@ class DataController {
                 container.mainContext.insert(route)
             }
             
+            container.mainContext.insert(Route.angelusHut)
+            
             return container
         } catch {
             fatalError("Could not create ModelContainer: \(error)")
