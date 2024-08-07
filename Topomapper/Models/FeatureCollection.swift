@@ -21,13 +21,7 @@ struct FeatureCollection: Codable {
         let properties: Properties
         
         struct Geometry: Codable {
-            let coordinates: [Coordinates]
-            
-            struct Coordinates: Codable {
-                let longitude: Double
-                let latitude: Double
-                let elevation: CLLocationDistance
-            }
+            let coordinates: [[Double]]
         }
         
         struct Properties: Codable {
