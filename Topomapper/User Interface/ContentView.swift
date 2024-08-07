@@ -9,15 +9,25 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
+    // MARK: - Internal Properties
+    @State private var selectedRoute: Route? = nil
     
     // MARK: - Body
     var body: some View {
         NavigationSplitView {
-            Sidebar()
+            Sidebar(selectedRoute: $selectedRoute)
         } content: {
-            Content()
+            if let selectedRoute {
+                Text(selectedRoute.name)
+            } else {
+                Text("No Route Selected")
+            }
         } detail: {
-            Detail()
+            if let selectedRoute {
+                Text(selectedRoute.name)
+            } else {
+                Text("No Route Selected")
+            }
         }
     }
 }

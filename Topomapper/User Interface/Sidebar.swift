@@ -9,16 +9,18 @@ import SwiftUI
 import SwiftData
 
 struct Sidebar: View {
+    // MARK: - Exposed Properties
+    @Binding var selectedRoute: Route?
+    
+    // MARK: - Internal Properties
     @Query(sort: \Route.creationDate) private var userRoutes: [Route]
     
     // MARK: - Body
     var body: some View {
-        List {
+        List(selection: $selectedRoute) {
             Section("My Routes") {
                 ForEach(userRoutes) { route in
-                    NavigationLink {
-                        Text(route.name)
-                    } label: {
+                    NavigationLink(value: route) {
                         TextField("Route name", text: Bindable(route).name)
                     }
                 }
@@ -29,6 +31,8 @@ struct Sidebar: View {
 
 // MARK: - Preview
 #Preview {
-    Sidebar()
+    Sidebar(
+        selectedRoute: .constant(Route(name: "My ROute", creationDate: Date(), waypoints: []))
+    )
         .modelContainer(DataController.previewModelContainer)
 }
