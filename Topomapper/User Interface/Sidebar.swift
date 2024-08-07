@@ -26,6 +26,11 @@ struct Sidebar: View {
                 }
             }
         }
+        .toolbar {
+            ToolbarItem(placement: .primaryAction) {
+                Button("New Route", systemImage: "plus", action: {})
+            }
+        }
     }
 }
 
