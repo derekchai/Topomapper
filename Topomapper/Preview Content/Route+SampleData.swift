@@ -25,4 +25,21 @@ extension Route {
         
         return route
     }
+    
+    static var tongariroCrossing: Route {
+        let url = Bundle.main.url(forResource: "TongariroCrossing", withExtension: "geojson")!
+        let data = try! Data(contentsOf: url)
+        
+        let decoder = GeoJSONDecoder()
+        let geoJSON = decoder.decode(data)!
+        
+        let route = Route(
+            from: geoJSON.features.first!.geometry,
+            name: "Tongariro Alpine Crossing",
+            creationDate: Date(),
+            userDescription: "A moderately challenging day walk in UNESCO World Heritage Site Tongariro National Park."
+        )
+        
+        return route
+    }
 }

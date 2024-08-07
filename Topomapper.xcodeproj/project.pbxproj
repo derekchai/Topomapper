@@ -31,6 +31,7 @@
 		A8E130E42C6309FC00F8BD6A /* Route+SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E130E32C6309FC00F8BD6A /* Route+SampleData.swift */; };
 		A8E130E62C630B9300F8BD6A /* AngelusHut.geojson in Resources */ = {isa = PBXBuildFile; fileRef = A8E130E52C630B9300F8BD6A /* AngelusHut.geojson */; };
 		A8E130E82C6312C000F8BD6A /* GeoJSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E130E72C6312C000F8BD6A /* GeoJSONDecoder.swift */; };
+		A8E130EF2C631ED500F8BD6A /* TongariroCrossing.geojson in Resources */ = {isa = PBXBuildFile; fileRef = A8E130EE2C631ED500F8BD6A /* TongariroCrossing.geojson */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		A8E130E32C6309FC00F8BD6A /* Route+SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Route+SampleData.swift"; sourceTree = "<group>"; };
 		A8E130E52C630B9300F8BD6A /* AngelusHut.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = AngelusHut.geojson; sourceTree = "<group>"; };
 		A8E130E72C6312C000F8BD6A /* GeoJSONDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoJSONDecoder.swift; sourceTree = "<group>"; };
+		A8E130EE2C631ED500F8BD6A /* TongariroCrossing.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = TongariroCrossing.geojson; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +225,7 @@
 		A8E130E92C63167600F8BD6A /* Sample GeoJSON */ = {
 			isa = PBXGroup;
 			children = (
+				A8E130EE2C631ED500F8BD6A /* TongariroCrossing.geojson */,
 				A8E130E52C630B9300F8BD6A /* AngelusHut.geojson */,
 			);
 			path = "Sample GeoJSON";
@@ -336,6 +339,7 @@
 				A8B940362C604DE100259870 /* Preview Assets.xcassets in Resources */,
 				A8E130D82C62CE1A00F8BD6A /* .gitignore in Resources */,
 				A8B940332C604DE100259870 /* Assets.xcassets in Resources */,
+				A8E130EF2C631ED500F8BD6A /* TongariroCrossing.geojson in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
