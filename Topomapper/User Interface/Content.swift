@@ -13,12 +13,18 @@ struct Content: View {
     
     // MARK: - Body
     var body: some View {
-        Text("Content")
-            .navigationTitle(route.name)
+        NavigationStack {
+            ScrollView {
+                VStack(alignment: .leading) {
+                    Text("\(route.waypoints.count) waypoints")
+                }
+            }
+        }
+        .navigationTitle(route.name)
     }
 }
 
 // MARK: - Preview
 #Preview {
-//    Content()
+    Content(route: Route.angelusHut)
 }
