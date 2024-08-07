@@ -14,10 +14,14 @@ struct Content: View {
     // MARK: - Body
     var body: some View {
         NavigationStack {
-            ScrollView {
-                VStack(alignment: .leading) {
-                    Text("\(route.waypoints.count) waypoints")
+            List {
+                if let description = route.userDescription {
+                    Text(description)
                 }
+                
+                Text("\(route.waypoints.count) waypoints")
+                    .font(.footnote)
+                    .foregroundStyle(.secondary)
             }
         }
         .navigationTitle(route.name)
