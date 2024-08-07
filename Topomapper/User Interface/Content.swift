@@ -38,6 +38,7 @@ struct Content: View {
                                 y: .value("Elevation", \.elevation)
                             )
                         }
+                        .padding([.top, .bottom])
                     }
                 }
                 
