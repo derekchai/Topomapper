@@ -121,6 +121,14 @@
 			path = Styles;
 			sourceTree = "<group>";
 		};
+		A80774892C65840C00405FCE /* Route Detail */ = {
+			isa = PBXGroup;
+			children = (
+				A8B9405C2C60526300259870 /* RouteDetailView.swift */,
+			);
+			path = "Route Detail";
+			sourceTree = "<group>";
+		};
 		A8B940202C604DE000259870 = {
 			isa = PBXGroup;
 			children = (
@@ -193,7 +201,7 @@
 				A8B9402E2C604DE000259870 /* ContentView.swift */,
 				A8B9405A2C60507B00259870 /* RoutesSidebarView.swift */,
 				A8B9405E2C605BC500259870 /* RouteContentView.swift */,
-				A8B9405C2C60526300259870 /* RouteDetailView.swift */,
+				A80774892C65840C00405FCE /* Route Detail */,
 			);
 			path = "User Interface";
 			sourceTree = "<group>";
