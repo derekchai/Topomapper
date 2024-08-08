@@ -18,7 +18,7 @@ struct ContentView: View {
             RoutesSidebarView(selectedRoute: $selectedRoute)
         } content: {
             if selectedRoute != nil {
-                Content(route: Binding($selectedRoute)!)
+                RouteContentView(route: Binding($selectedRoute)!)
             } else {
                 Text("No Route Selected")
             }

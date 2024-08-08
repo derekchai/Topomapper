@@ -8,7 +8,7 @@
 import SwiftUI
 import Charts
 
-struct Content: View {
+struct RouteContentView: View {
     // MARK: - Exposed Properties
     @Binding var route: Route
     
@@ -73,5 +73,5 @@ struct Content: View {
 
 // MARK: - Preview
 #Preview {
-    Content(route: .constant(Route.angelusHut))
+    RouteContentView(route: .constant(Route.angelusHut))
 }
