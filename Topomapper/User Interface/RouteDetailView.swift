@@ -22,7 +22,10 @@ struct RouteDetailView: View {
             RouteMapViewControllerRepresentable()
                 .toolbar {
                     ToolbarItem {
-                        Toggle(isOn: $isShowingEditRoutePathCard.animation()) {
+                        Toggle(
+                            isOn: $isShowingEditRoutePathCard
+                                .animation()
+                        ) {
                             Label("Edit Route path", image: "path.edit")
                         }
                     }
@@ -36,9 +39,9 @@ struct RouteDetailView: View {
                     .shadow(radius: 16)
                     .padding()  // Exterior padding
                     .transition(.move(edge: .trailing))
+                    .zIndex(1)
             }
         } // ZStack
-        .transition(.slide)
     }
 }
 
