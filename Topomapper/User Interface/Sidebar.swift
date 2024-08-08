@@ -34,15 +34,15 @@ struct Sidebar: View {
                     }
                     .confirmationDialog(
                         "Are you sure you want to delete this Route?",
-                        isPresented: $isShowingDeleteRouteAlert) {
-                            Button(
-                                "Delete",
-                                role: .destructive,
-                                action: {deleteRoute(route)
-                                })
-                        } message: {
-                            Text("This action is irreversible.")
-                        }
+                        isPresented: $isShowingDeleteRouteAlert
+                    ) {
+                        Button(
+                            "Delete",
+                            role: .destructive,
+                            action: {deleteRoute(route)})
+                    } message: {
+                        Text("This action is irreversible.")
+                    }
                 }
             }
         }
@@ -56,20 +56,25 @@ struct Sidebar: View {
                 selectedRoute = firstRoute
             }
         }
-    }
+    } // body
 }
 
 // MARK: - Actions
 extension Sidebar {
     /// Creates a new empty ``Route`` and inserts it into the model context.
     private func createNewRoute() {
-        let route = Route(
+        let newRoute = Route(
             name: "New Route",
             creationDate: Date(),
             userDescription: "",
             waypoints: []
         )
-        modelContext.insert(route)
+        modelContext.insert(newRoute)
+        
+        // Ensure userRoutes is updated before setting selectedRoute.
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.001) {
+            selectedRoute = newRoute
+        }
     }
     
     /// Deletes the currently selected ``Route`` from the model context.
