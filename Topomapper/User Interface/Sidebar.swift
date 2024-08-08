@@ -40,6 +40,11 @@ struct Sidebar: View {
             ToolbarItem(placement: .primaryAction) {
                 Button("New Route", systemImage: "plus", action: createNewRoute)
             }
+        } // toolbar
+        .onAppear {
+            if let firstRoute = userRoutes.first {
+                selectedRoute = firstRoute
+            }
         }
     }
 }
