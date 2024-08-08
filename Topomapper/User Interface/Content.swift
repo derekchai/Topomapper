@@ -43,6 +43,12 @@ struct Content: View {
                             )
                         }
                         .padding([.top, .bottom])
+                        .chartXAxis {
+                            AxisMarks(format: .routeLength)
+                        }
+                        .chartYAxis {
+                            AxisMarks(format: .elevation)
+                        }
                     }
                 }
                 
