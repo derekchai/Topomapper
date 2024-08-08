@@ -17,7 +17,7 @@
 		A8B9404B2C604DE100259870 /* TopomapperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9404A2C604DE100259870 /* TopomapperUITests.swift */; };
 		A8B9404D2C604DE100259870 /* TopomapperUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9404C2C604DE100259870 /* TopomapperUITestsLaunchTests.swift */; };
 		A8B9405B2C60507B00259870 /* RoutesSidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9405A2C60507B00259870 /* RoutesSidebarView.swift */; };
-		A8B9405D2C60526300259870 /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9405C2C60526300259870 /* Detail.swift */; };
+		A8B9405D2C60526300259870 /* RouteDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9405C2C60526300259870 /* RouteDetailView.swift */; };
 		A8B9405F2C605BC500259870 /* RouteContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9405E2C605BC500259870 /* RouteContentView.swift */; };
 		A8B940622C605C2900259870 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B940612C605C2900259870 /* Route.swift */; };
 		A8B940682C605E7600259870 /* Waypoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B940672C605E7600259870 /* Waypoint.swift */; };
@@ -68,7 +68,7 @@
 		A8B9404A2C604DE100259870 /* TopomapperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopomapperUITests.swift; sourceTree = "<group>"; };
 		A8B9404C2C604DE100259870 /* TopomapperUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopomapperUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A8B9405A2C60507B00259870 /* RoutesSidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesSidebarView.swift; sourceTree = "<group>"; };
-		A8B9405C2C60526300259870 /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
+		A8B9405C2C60526300259870 /* RouteDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteDetailView.swift; sourceTree = "<group>"; };
 		A8B9405E2C605BC500259870 /* RouteContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteContentView.swift; sourceTree = "<group>"; };
 		A8B940612C605C2900259870 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		A8B940672C605E7600259870 /* Waypoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Waypoint.swift; sourceTree = "<group>"; };
@@ -193,7 +193,7 @@
 				A8B9402E2C604DE000259870 /* ContentView.swift */,
 				A8B9405A2C60507B00259870 /* RoutesSidebarView.swift */,
 				A8B9405E2C605BC500259870 /* RouteContentView.swift */,
-				A8B9405C2C60526300259870 /* Detail.swift */,
+				A8B9405C2C60526300259870 /* RouteDetailView.swift */,
 			);
 			path = "User Interface";
 			sourceTree = "<group>";
@@ -383,7 +383,7 @@
 				A80774882C64E27D00405FCE /* ElevationFormatStyle.swift in Sources */,
 				A8B9402F2C604DE000259870 /* ContentView.swift in Sources */,
 				A8B9405B2C60507B00259870 /* RoutesSidebarView.swift in Sources */,
-				A8B9405D2C60526300259870 /* Detail.swift in Sources */,
+				A8B9405D2C60526300259870 /* RouteDetailView.swift in Sources */,
 				A8E130E82C6312C000F8BD6A /* GeoJSONDecoder.swift in Sources */,
 				A8B940682C605E7600259870 /* Waypoint.swift in Sources */,
 				A8B940622C605C2900259870 /* Route.swift in Sources */,

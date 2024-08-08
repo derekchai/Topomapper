@@ -1,5 +1,5 @@
 //
-//  Detail.swift
+//  RouteDetailView.swift
 //  Topomapper
 //
 //  Created by Derek Chai on 05/08/2024.
@@ -9,7 +9,7 @@ import SwiftUI
 import MapKit
 import TipKit
 
-struct Detail: View {
+struct RouteDetailView: View {
     private let editRoutePathTip = EditRoutePathTip()
     
     // MARK: - Body
@@ -45,5 +45,5 @@ struct EditRoutePathTip: Tip {
 
 // MARK: - Preview
 #Preview {
-    Detail()
+    RouteDetailView()
 }
