@@ -17,6 +17,7 @@ struct Sidebar: View {
     @Query(sort: \Route.creationDate) private var userRoutes: [Route]
     @State private var isShowingDeleteRouteAlert: Bool = false
     @State private var routeToDelete: Route? = nil
+    @FocusState private var focusedRoute: Route?
     
     // MARK: - Body
     var body: some View {
@@ -25,6 +26,7 @@ struct Sidebar: View {
                 ForEach(userRoutes) { route in
                     NavigationLink(value: route) {
                         TextField("Route name", text: Bindable(route).name)
+                            .focused($focusedRoute, equals: route)
                     }
                     .contextMenu {
                         Button(
@@ -72,6 +74,7 @@ extension Sidebar {
             waypoints: []
         )
         modelContext.insert(newRoute)
+        focusedRoute = newRoute
         
         // Ensure userRoutes is updated before setting selectedRoute.
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.001) {
