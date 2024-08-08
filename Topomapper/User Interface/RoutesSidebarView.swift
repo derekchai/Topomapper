@@ -1,5 +1,5 @@
 //
-//  Sidebar.swift
+//  RoutesSidebarView.swift
 //  Topomapper
 //
 //  Created by Derek Chai on 05/08/2024.
