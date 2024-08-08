@@ -12,6 +12,13 @@ struct Content: View {
     // MARK: - Exposed Properties
     @Binding var route: Route
     
+    // MARK: - Internal Properties
+    private let areaGradient = LinearGradient(
+        colors: [.blue.opacity(0.5), .blue.opacity(0.2), .blue.opacity(0.05)],
+        startPoint: .top,
+        endPoint: .bottom
+    )
+    
     // MARK: - Body
     var body: some View {
         NavigationStack {
@@ -41,6 +48,13 @@ struct Content: View {
                                         ),
                                 y: .value("Elevation", \.elevation)
                             )
+                            
+                            AreaPlot(
+                                route.waypoints,
+                                x: .value("Distance from start", \.distanceFromStart),
+                                y: .value("Elevation", \.elevation)
+                            )
+                            .foregroundStyle(areaGradient)
                         }
                         .padding([.top, .bottom])
                         .chartXAxis {
