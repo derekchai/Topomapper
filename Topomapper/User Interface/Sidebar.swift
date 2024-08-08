@@ -35,18 +35,6 @@ struct Sidebar: View {
                             action: {showDeleteRouteAlert(routeToDelete: route)}
                         )
                     }
-                    .confirmationDialog(
-                        "Are you sure you want to delete \(routeToDelete?.name ?? "this Route")?",
-                        isPresented: $isShowingDeleteRouteAlert
-                    ) {
-                        Button(
-                            "Delete",
-                            role: .destructive,
-                            action: deleteRoute
-                        )
-                    } message: {
-                        Text("This action is irreversible.")
-                    }
                 }
             }
         }
@@ -59,6 +47,19 @@ struct Sidebar: View {
             if let firstRoute = userRoutes.first {
                 selectedRoute = firstRoute
             }
+        }
+        // MARK: Route deletion confirmation dialog.
+        .confirmationDialog(
+            "Are you sure you want to delete \(routeToDelete?.name ?? "this Route")?",
+            isPresented: $isShowingDeleteRouteAlert
+        ) {
+            Button(
+                "Delete",
+                role: .destructive,
+                action: deleteRoute
+            )
+        } message: {
+            Text("This action is irreversible.")
         }
     } // body
 }
@@ -88,14 +89,19 @@ extension Sidebar {
         withAnimation {
             if let routeToDelete {
                 modelContext.delete(routeToDelete)
+                
+                self.routeToDelete = nil
+                self.isShowingDeleteRouteAlert = false
             }
         }
     }
     
     /// Show the ``Route`` deletion confirmation alert.
     private func showDeleteRouteAlert(routeToDelete: Route) {
-        isShowingDeleteRouteAlert = true
+        guard !isShowingDeleteRouteAlert else { return }
+        
         self.routeToDelete = routeToDelete
+        isShowingDeleteRouteAlert = true
     }
 }
 
