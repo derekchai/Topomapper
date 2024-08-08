@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A80774862C64E23800405FCE /* RouteLengthFormatStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80774852C64E23800405FCE /* RouteLengthFormatStyle.swift */; };
+		A80774882C64E27D00405FCE /* ElevationFormatStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80774872C64E27D00405FCE /* ElevationFormatStyle.swift */; };
 		A8B9402D2C604DE000259870 /* TopomapperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9402C2C604DE000259870 /* TopomapperApp.swift */; };
 		A8B9402F2C604DE000259870 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9402E2C604DE000259870 /* ContentView.swift */; };
 		A8B940332C604DE100259870 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8B940322C604DE100259870 /* Assets.xcassets */; };
@@ -54,6 +55,7 @@
 
 /* Begin PBXFileReference section */
 		A80774852C64E23800405FCE /* RouteLengthFormatStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteLengthFormatStyle.swift; sourceTree = "<group>"; };
+		A80774872C64E27D00405FCE /* ElevationFormatStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElevationFormatStyle.swift; sourceTree = "<group>"; };
 		A8B940292C604DE000259870 /* Topomapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Topomapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8B9402C2C604DE000259870 /* TopomapperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopomapperApp.swift; sourceTree = "<group>"; };
 		A8B9402E2C604DE000259870 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				A80774852C64E23800405FCE /* RouteLengthFormatStyle.swift */,
+				A80774872C64E27D00405FCE /* ElevationFormatStyle.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 			files = (
 				A8E130C82C617A0D00F8BD6A /* WebService.swift in Sources */,
 				A8B9406B2C605F4000259870 /* TypeAliases.swift in Sources */,
+				A80774882C64E27D00405FCE /* ElevationFormatStyle.swift in Sources */,
 				A8B9402F2C604DE000259870 /* ContentView.swift in Sources */,
 				A8B9405B2C60507B00259870 /* Sidebar.swift in Sources */,
 				A8B9405D2C60526300259870 /* Detail.swift in Sources */,
