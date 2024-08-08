@@ -8,7 +8,7 @@
 import SwiftUI
 import SwiftData
 
-struct Sidebar: View {
+struct RoutesSidebarView: View {
     // MARK: - Exposed Properties
     /// The currently selected ``Route``.
     @Binding var selectedRoute: Route?
@@ -79,7 +79,7 @@ struct Sidebar: View {
 }
 
 // MARK: - Actions
-extension Sidebar {
+extension RoutesSidebarView {
     /// Creates a new empty ``Route`` and inserts it into the model context.
     private func createNewRoute() {
         let newRoute = Route(
@@ -122,7 +122,7 @@ extension Sidebar {
 
 // MARK: - Preview
 #Preview {
-    Sidebar(
+    RoutesSidebarView(
         selectedRoute: .constant(Route(name: "My ROute", creationDate: Date(), waypoints: []))
     )
     .modelContainer(DataController.previewModelContainer)

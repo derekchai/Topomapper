@@ -16,7 +16,7 @@
 		A8B940412C604DE100259870 /* TopomapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B940402C604DE100259870 /* TopomapperTests.swift */; };
 		A8B9404B2C604DE100259870 /* TopomapperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9404A2C604DE100259870 /* TopomapperUITests.swift */; };
 		A8B9404D2C604DE100259870 /* TopomapperUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9404C2C604DE100259870 /* TopomapperUITestsLaunchTests.swift */; };
-		A8B9405B2C60507B00259870 /* Sidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9405A2C60507B00259870 /* Sidebar.swift */; };
+		A8B9405B2C60507B00259870 /* RoutesSidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9405A2C60507B00259870 /* RoutesSidebarView.swift */; };
 		A8B9405D2C60526300259870 /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9405C2C60526300259870 /* Detail.swift */; };
 		A8B9405F2C605BC500259870 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9405E2C605BC500259870 /* Content.swift */; };
 		A8B940622C605C2900259870 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B940612C605C2900259870 /* Route.swift */; };
@@ -67,7 +67,7 @@
 		A8B940462C604DE100259870 /* TopomapperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TopomapperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8B9404A2C604DE100259870 /* TopomapperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopomapperUITests.swift; sourceTree = "<group>"; };
 		A8B9404C2C604DE100259870 /* TopomapperUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopomapperUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		A8B9405A2C60507B00259870 /* Sidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sidebar.swift; sourceTree = "<group>"; };
+		A8B9405A2C60507B00259870 /* RoutesSidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesSidebarView.swift; sourceTree = "<group>"; };
 		A8B9405C2C60526300259870 /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
 		A8B9405E2C605BC500259870 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		A8B940612C605C2900259870 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
@@ -191,7 +191,7 @@
 			children = (
 				A8E130D02C61A98500F8BD6A /* Shared */,
 				A8B9402E2C604DE000259870 /* ContentView.swift */,
-				A8B9405A2C60507B00259870 /* Sidebar.swift */,
+				A8B9405A2C60507B00259870 /* RoutesSidebarView.swift */,
 				A8B9405E2C605BC500259870 /* Content.swift */,
 				A8B9405C2C60526300259870 /* Detail.swift */,
 			);
@@ -382,7 +382,7 @@
 				A8B9406B2C605F4000259870 /* TypeAliases.swift in Sources */,
 				A80774882C64E27D00405FCE /* ElevationFormatStyle.swift in Sources */,
 				A8B9402F2C604DE000259870 /* ContentView.swift in Sources */,
-				A8B9405B2C60507B00259870 /* Sidebar.swift in Sources */,
+				A8B9405B2C60507B00259870 /* RoutesSidebarView.swift in Sources */,
 				A8B9405D2C60526300259870 /* Detail.swift in Sources */,
 				A8E130E82C6312C000F8BD6A /* GeoJSONDecoder.swift in Sources */,
 				A8B940682C605E7600259870 /* Waypoint.swift in Sources */,

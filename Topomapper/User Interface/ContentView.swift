@@ -15,7 +15,7 @@ struct ContentView: View {
     // MARK: - Body
     var body: some View {
         NavigationSplitView {
-            Sidebar(selectedRoute: $selectedRoute)
+            RoutesSidebarView(selectedRoute: $selectedRoute)
         } content: {
             if selectedRoute != nil {
                 Content(route: Binding($selectedRoute)!)
