@@ -10,13 +10,27 @@ import SwiftData
 
 struct Sidebar: View {
     // MARK: - Exposed Properties
+    /// The currently selected ``Route``.
     @Binding var selectedRoute: Route?
     
     // MARK: - Internal Properties
     @Environment(\.modelContext) private var modelContext
+    
+    /// The persistent ``Route``s created by the user, stored in SwiftData.
     @Query(sort: \Route.creationDate) private var userRoutes: [Route]
+    
+    /// Whether the `View` is showing the ``Route`` deletion confirmation alert.
     @State private var isShowingDeleteRouteAlert: Bool = false
+    
+    /// The ``Route`` which is to be deleted.
     @State private var routeToDelete: Route? = nil
+    
+    /// The ``Route`` which is currently being focused on by the user.
+    ///
+    /// This allows for programmatically focusing upon the `TextField` of a
+    /// ``Route``. This is used when the user creates a new ``Route``, so that
+    /// the app automatically focuses on the `TextField` containting the name of
+    /// this ``Route``.
     @FocusState private var focusedRoute: Route?
     
     // MARK: - Body
@@ -32,7 +46,7 @@ struct Sidebar: View {
                         Button(
                             "Delete Route",
                             role: .destructive,
-                            action: {showDeleteRouteAlert(routeToDelete: route)}
+                            action: { showDeleteRouteAlert(routeToDelete: route) }
                         )
                     }
                 }
@@ -90,6 +104,7 @@ extension Sidebar {
             if let routeToDelete {
                 modelContext.delete(routeToDelete)
                 
+                // Reset state variables.
                 self.routeToDelete = nil
                 self.isShowingDeleteRouteAlert = false
             }
