@@ -41,11 +41,7 @@ struct Content: View {
                         Chart {
                             LinePlot(
                                 route.waypoints,
-                                x:
-                                        .value(
-                                            "Distance from start",
-                                            \.distanceFromStart
-                                        ),
+                                x: .value("Distance from start", \.distanceFromStart),
                                 y: .value("Elevation", \.elevation)
                             )
                             
@@ -56,13 +52,13 @@ struct Content: View {
                             )
                             .foregroundStyle(areaGradient)
                         }
-                        .padding([.top, .bottom])
                         .chartXAxis {
                             AxisMarks(format: .routeLength)
                         }
                         .chartYAxis {
                             AxisMarks(format: .elevation)
                         }
+                        .padding([.top, .bottom])
                     }
                 }
                 
