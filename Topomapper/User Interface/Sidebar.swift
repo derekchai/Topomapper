@@ -16,6 +16,7 @@ struct Sidebar: View {
     @Environment(\.modelContext) private var modelContext
     @Query(sort: \Route.creationDate) private var userRoutes: [Route]
     @State private var isShowingDeleteRouteAlert: Bool = false
+    @State private var routeToDelete: Route? = nil
     
     // MARK: - Body
     var body: some View {
@@ -29,17 +30,18 @@ struct Sidebar: View {
                         Button(
                             "Delete Route",
                             role: .destructive,
-                            action: showDeleteRouteAlert
+                            action: {showDeleteRouteAlert(routeToDelete: route)}
                         )
                     }
                     .confirmationDialog(
-                        "Are you sure you want to delete this Route?",
+                        "Are you sure you want to delete \(routeToDelete?.name ?? "this Route")?",
                         isPresented: $isShowingDeleteRouteAlert
                     ) {
                         Button(
                             "Delete",
                             role: .destructive,
-                            action: {deleteRoute(route)})
+                            action: deleteRoute
+                        )
                     } message: {
                         Text("This action is irreversible.")
                     }
@@ -79,15 +81,18 @@ extension Sidebar {
     
     /// Deletes the given ``Route`` from the model context.
     /// - Parameter route: The ``Route`` to delete.
-    private func deleteRoute(_ route: Route) {
+    private func deleteRoute() {
         withAnimation {
-            modelContext.delete(route)
+            if let routeToDelete {
+                modelContext.delete(routeToDelete)
+            }
         }
     }
     
     /// Show the ``Route`` deletion confirmation alert.
-    private func showDeleteRouteAlert() {
+    private func showDeleteRouteAlert(routeToDelete: Route) {
         isShowingDeleteRouteAlert = true
+        self.routeToDelete = routeToDelete
     }
 }
 
