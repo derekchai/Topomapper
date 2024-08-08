@@ -10,22 +10,35 @@ import MapKit
 import TipKit
 
 struct RouteDetailView: View {
+    // MARK: - Internal Properties
+    /// Whether ``RouteDetailView`` is showing the Edit Route path card.
+    @State private var isShowingEditRoutePathCard: Bool = false
+    
     private let editRoutePathTip = EditRoutePathTip()
     
     // MARK: - Body
     var body: some View {
-        RouteMapViewControllerRepresentable()
-            .toolbar {
-                ToolbarItem(placement: .primaryAction) {
-                    Button(
-                        action: {},
-                        label: {
+        ZStack(alignment: .topTrailing) {
+            RouteMapViewControllerRepresentable()
+                .toolbar {
+                    ToolbarItem {
+                        Toggle(isOn: $isShowingEditRoutePathCard.animation()) {
                             Label("Edit Route path", image: "path.edit")
                         }
-                    )
-                    .popoverTip(editRoutePathTip, arrowEdge: .bottom)
+                    }
                 }
+            
+            if isShowingEditRoutePathCard {
+                Text("Edit waypoints card")
+                    .padding()  // Interior padding
+                    .background(.ultraThickMaterial)
+                    .clipShape(RoundedRectangle(cornerRadius: 16))
+                    .shadow(radius: 16)
+                    .padding()  // Exterior padding
+                    .transition(.move(edge: .trailing))
             }
+        } // ZStack
+        .transition(.slide)
     }
 }
 
