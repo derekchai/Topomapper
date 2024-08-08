@@ -77,13 +77,6 @@ extension Sidebar {
         }
     }
     
-    /// Deletes the currently selected ``Route`` from the model context.
-    private func deleteSelectedRoute() {
-        if let selectedRoute {
-            modelContext.delete(selectedRoute)
-        }
-    }
-    
     /// Deletes the given ``Route`` from the model context.
     /// - Parameter route: The ``Route`` to delete.
     private func deleteRoute(_ route: Route) {
