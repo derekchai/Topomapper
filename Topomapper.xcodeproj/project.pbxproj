@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A80774862C64E23800405FCE /* RouteLengthFormatStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80774852C64E23800405FCE /* RouteLengthFormatStyle.swift */; };
 		A8B9402D2C604DE000259870 /* TopomapperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9402C2C604DE000259870 /* TopomapperApp.swift */; };
 		A8B9402F2C604DE000259870 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9402E2C604DE000259870 /* ContentView.swift */; };
 		A8B940332C604DE100259870 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8B940322C604DE100259870 /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A80774852C64E23800405FCE /* RouteLengthFormatStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteLengthFormatStyle.swift; sourceTree = "<group>"; };
 		A8B940292C604DE000259870 /* Topomapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Topomapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8B9402C2C604DE000259870 /* TopomapperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopomapperApp.swift; sourceTree = "<group>"; };
 		A8B9402E2C604DE000259870 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -108,6 +110,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A80774842C64E23100405FCE /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				A80774852C64E23800405FCE /* RouteLengthFormatStyle.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
 		A8B940202C604DE000259870 = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +226,7 @@
 		A8E130D02C61A98500F8BD6A /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				A80774842C64E23100405FCE /* Styles */,
 				A8E130D12C61A99A00F8BD6A /* RouteMapViewController.swift */,
 				A8E130D32C61AB4A00F8BD6A /* RouteMapViewControllerRepresentable.swift */,
 			);
@@ -376,6 +387,7 @@
 				A8E130DA2C62CE2F00F8BD6A /* Key.swift in Sources */,
 				A8E130D22C61A99A00F8BD6A /* RouteMapViewController.swift in Sources */,
 				A8E130C62C609B0C00F8BD6A /* GeoJSONFeatureCollection.swift in Sources */,
+				A80774862C64E23800405FCE /* RouteLengthFormatStyle.swift in Sources */,
 				A8E130E22C62FF0000F8BD6A /* DataController.swift in Sources */,
 				A8B9405F2C605BC500259870 /* Content.swift in Sources */,
 				A8B9406E2C6067F200259870 /* CLLocationCoordinate2D+Protocols.swift in Sources */,
