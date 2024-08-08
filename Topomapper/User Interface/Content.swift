@@ -25,6 +25,10 @@ struct Content: View {
                     )
                 }
                 
+                if route.waypoints.isEmpty {
+                    ContentUnavailableView("No waypoints", image: "mappin.and.ellipse.badge.questionmark", description: Text("This Route has no waypoints. Press the Edit Route waypoints button to get started!"))
+                }
+                
                 if #available(macOS 15.0, *) {
                     Section("Elevation Profile") {
                         Chart {
