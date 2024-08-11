@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A80774862C64E23800405FCE /* RouteLengthFormatStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80774852C64E23800405FCE /* RouteLengthFormatStyle.swift */; };
 		A80774882C64E27D00405FCE /* ElevationFormatStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80774872C64E27D00405FCE /* ElevationFormatStyle.swift */; };
+		A807748B2C65842500405FCE /* EditRoutePathCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A807748A2C65842500405FCE /* EditRoutePathCard.swift */; };
 		A8B9402D2C604DE000259870 /* TopomapperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9402C2C604DE000259870 /* TopomapperApp.swift */; };
 		A8B9402F2C604DE000259870 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9402E2C604DE000259870 /* ContentView.swift */; };
 		A8B940332C604DE100259870 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8B940322C604DE100259870 /* Assets.xcassets */; };
@@ -56,6 +57,7 @@
 /* Begin PBXFileReference section */
 		A80774852C64E23800405FCE /* RouteLengthFormatStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteLengthFormatStyle.swift; sourceTree = "<group>"; };
 		A80774872C64E27D00405FCE /* ElevationFormatStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElevationFormatStyle.swift; sourceTree = "<group>"; };
+		A807748A2C65842500405FCE /* EditRoutePathCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRoutePathCard.swift; sourceTree = "<group>"; };
 		A8B940292C604DE000259870 /* Topomapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Topomapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8B9402C2C604DE000259870 /* TopomapperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopomapperApp.swift; sourceTree = "<group>"; };
 		A8B9402E2C604DE000259870 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				A8B9405C2C60526300259870 /* RouteDetailView.swift */,
+				A807748A2C65842500405FCE /* EditRoutePathCard.swift */,
 			);
 			path = "Route Detail";
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				A8B940682C605E7600259870 /* Waypoint.swift in Sources */,
 				A8B940622C605C2900259870 /* Route.swift in Sources */,
 				A8E130E42C6309FC00F8BD6A /* Route+SampleData.swift in Sources */,
+				A807748B2C65842500405FCE /* EditRoutePathCard.swift in Sources */,
 				A8E130DA2C62CE2F00F8BD6A /* Key.swift in Sources */,
 				A8E130D22C61A99A00F8BD6A /* RouteMapViewController.swift in Sources */,
 				A8E130C62C609B0C00F8BD6A /* GeoJSONFeatureCollection.swift in Sources */,

@@ -10,6 +10,10 @@ import MapKit
 import TipKit
 
 struct RouteDetailView: View {
+    
+    // MARK: - Exposed Properties
+    @Binding var route: Route
+    
     // MARK: - Internal Properties
     /// Whether ``RouteDetailView`` is showing the Edit Route path card.
     @State private var isShowingEditRoutePathCard: Bool = false
@@ -32,16 +36,21 @@ struct RouteDetailView: View {
                 }
             
             if isShowingEditRoutePathCard {
-                Text("Edit waypoints card")
-                    .padding()  // Interior padding
-                    .background(.ultraThickMaterial)
-                    .clipShape(RoundedRectangle(cornerRadius: 16))
-                    .shadow(radius: 16)
-                    .padding()  // Exterior padding
-                    .transition(.move(edge: .trailing))
-                    .zIndex(1)
+                EditRoutePathCard(
+                    route: $route,
+                    onDidPressCloseButton: hideEditRoutePathCard
+                )
             }
         } // ZStack
+    }
+}
+
+// MARK: - Actions
+extension RouteDetailView {
+    private func hideEditRoutePathCard() {
+        withAnimation {
+            isShowingEditRoutePathCard = false
+        }
     }
 }
 
@@ -61,5 +70,5 @@ struct EditRoutePathTip: Tip {
 
 // MARK: - Preview
 #Preview {
-    RouteDetailView()
+    RouteDetailView(route: .constant(Route.angelusHut))
 }

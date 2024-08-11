@@ -24,7 +24,7 @@ struct ContentView: View {
             }
         } detail: {
             if selectedRoute != nil {
-                RouteDetailView()
+                RouteDetailView(route: Binding($selectedRoute)!)
             } else {
                 Text("No Route Selected")
             }
