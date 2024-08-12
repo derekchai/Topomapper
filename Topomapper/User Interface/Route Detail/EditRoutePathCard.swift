@@ -35,18 +35,7 @@ struct EditRoutePathCard: View {
             
             List {
                 ForEach($stops, id: \.self, editActions: .all) { stop in
-                    HStack {
-                        Image(systemName: "mappin.circle.fill")
-                            .foregroundStyle(.tertiary)
-                        
-                        Text(stop.wrappedValue)
-                        
-                        Spacer()
-                        
-                        Image(systemName: "line.3.horizontal")
-                            .foregroundStyle(.tertiary)
-                    }
-                    .listRowSeparatorTint(.secondary.opacity(0.3))
+                    StopListItem(stop: stop.wrappedValue)
                 }
                 
                 HStack {
