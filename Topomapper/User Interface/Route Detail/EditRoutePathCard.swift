@@ -26,7 +26,7 @@ struct EditRoutePathCard: View {
                     Image(systemName: "xmark.circle.fill")
                 }
                 .buttonStyle(.plain)
-            
+                
                 Spacer()
                 
                 Text("Edit Route path")
@@ -64,15 +64,15 @@ struct EditRoutePathCard: View {
             .scrollContentBackground(.hidden)
             .clipShape(RoundedRectangle(cornerRadius: 8))
             .padding(.top)
-        }
-            .frame(maxWidth: 200)
-            .padding()  // Interior padding
-            .background(.thickMaterial)
-            .clipShape(RoundedRectangle(cornerRadius: 16))
-            .shadow(radius: 16)
-            .padding()  // Exterior padding
-            .transition(.move(edge: .trailing))
-            .zIndex(1)
+        } // VStack
+        .frame(maxWidth: 200, maxHeight: 300)
+        .padding()  // Interior padding
+        .background(.thickMaterial)
+        .clipShape(RoundedRectangle(cornerRadius: 16))
+        .shadow(radius: 16)
+        .padding()  // Exterior padding
+        .transition(.move(edge: .trailing))
+        .zIndex(1)
     }
 }
 
