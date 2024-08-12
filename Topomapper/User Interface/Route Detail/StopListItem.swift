@@ -24,7 +24,10 @@ struct StopListItem: View {
             Image(systemName: "line.3.horizontal")
                 .foregroundStyle(.tertiary)
         }
+        .padding(8)
         .listRowSeparatorTint(.secondary.opacity(0.3))
+        .background(.quinary)
+        .clipShape(RoundedRectangle(cornerRadius: 8))
     }
 }
 
