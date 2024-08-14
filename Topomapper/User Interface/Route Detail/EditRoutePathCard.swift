@@ -38,9 +38,15 @@ struct EditRoutePathCard: View {
             
             ForEach($stops, id: \.self, editActions: .all) { stop in
                 StopListItem(stop: stop.wrappedValue)
+                    .scaleEffect(draggedStop == stop.wrappedValue ? 1.1 : 1)
                     .onDrag {
-                        draggedStop = stop.wrappedValue
+                        withAnimation {
+                            draggedStop = stop.wrappedValue
+                        }
+
                         return NSItemProvider(object: stop.wrappedValue as NSString)
+                    } preview: {
+                        Color.clear
                     }
                     .onDrop(
                         of: [.text],
@@ -70,6 +76,7 @@ struct EditRoutePathCard: View {
         .padding()  // Exterior padding
         .transition(.move(edge: .trailing))
         .zIndex(1)
+        
     }
 }
 
@@ -83,7 +90,10 @@ struct StopListItemDropDelegate: DropDelegate {
     }
     
     func performDrop(info: DropInfo) -> Bool {
-        draggedStop = nil
+        withAnimation {
+            draggedStop = nil
+        }
+        
         return true
     }
     
