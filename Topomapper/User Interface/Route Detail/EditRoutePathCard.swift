@@ -38,7 +38,7 @@ struct EditRoutePathCard: View {
             
             ForEach($stops, id: \.self, editActions: .all) { stop in
                 StopListItem(stop: stop.wrappedValue)
-                    .scaleEffect(draggedStop == stop.wrappedValue ? 1.1 : 1)
+//                    .scaleEffect(draggedStop == stop.wrappedValue ? 1.1 : 1)
                     .onDrag {
                         withAnimation {
                             draggedStop = stop.wrappedValue
@@ -76,7 +76,6 @@ struct EditRoutePathCard: View {
         .padding()  // Exterior padding
         .transition(.move(edge: .trailing))
         .zIndex(1)
-        
     }
 }
 
