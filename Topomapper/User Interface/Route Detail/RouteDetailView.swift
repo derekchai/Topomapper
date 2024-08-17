@@ -23,7 +23,7 @@ struct RouteDetailView: View {
     // MARK: - Body
     var body: some View {
         ZStack(alignment: .topTrailing) {
-            RouteMapViewControllerRepresentable()
+            RouteMapViewControllerRepresentable(stops: $route.stops)
                 .toolbar {
                     ToolbarItem {
                         Toggle(

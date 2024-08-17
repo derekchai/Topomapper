@@ -86,7 +86,8 @@ extension RoutesSidebarView {
             name: "New Route",
             creationDate: Date(),
             userDescription: "",
-            waypoints: []
+            waypoints: [],
+            stops: []
         )
         modelContext.insert(newRoute)
         focusedRoute = newRoute
@@ -123,7 +124,7 @@ extension RoutesSidebarView {
 // MARK: - Preview
 #Preview {
     RoutesSidebarView(
-        selectedRoute: .constant(Route(name: "My ROute", creationDate: Date(), waypoints: []))
+        selectedRoute: .constant(Route.angelusHut)
     )
     .modelContainer(DataController.previewModelContainer)
 }

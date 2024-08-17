@@ -25,17 +25,26 @@ import CoreLocation
     /// this ``Route`` takes.
     var waypoints: [Waypoint]
     
+    /// An array of coordinates outlining the stops on this ``Route``.
+    ///
+    /// The ``Route``'s path (`waypoints`) should pass through all of these
+    /// coordinates. However, the path is not strictly these coordinates only.
+    /// This is used for getting direcitons with the directions API.
+    var stops: [CLLocationCoordinate2D]
+    
     // MARK: - Initializer
     init(
         name: String,
         creationDate: Date,
-        userDescription: String = "",
-        waypoints: [Waypoint]
+        userDescription: String,
+        waypoints: [Waypoint],
+        stops: [CLLocationCoordinate2D]
     ) {
         self.name = name
         self.creationDate = creationDate
         self.userDescription = userDescription
         self.waypoints = waypoints
+        self.stops = stops
     }
 }
 
@@ -53,7 +62,8 @@ extension Route {
         from geometry: GeoJSONFeatureCollection.Feature.Geometry,
         name: String,
         creationDate: Date,
-        userDescription: String = ""
+        userDescription: String = "",
+        stops: [CLLocationCoordinate2D]
     ) {
         let coordinates = geometry.coordinates
         
@@ -108,7 +118,8 @@ extension Route {
             name: name,
             creationDate: creationDate,
             userDescription: userDescription,
-            waypoints: waypoints
+            waypoints: waypoints,
+            stops: stops
         )
     }
 }

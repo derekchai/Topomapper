@@ -134,7 +134,8 @@ extension EditRoutePathCard {
         name: "My Route",
         creationDate: Date(),
         userDescription: "My Route description",
-        waypoints: []
+        waypoints: [],
+        stops: []
     )
     
     EditRoutePathCard(route: .constant(route))

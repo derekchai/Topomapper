@@ -20,7 +20,8 @@ extension Route {
             from: geoJSON.features.first!.geometry,
             name: "St. Arnaud to Angelus Hut",
             creationDate: Date(),
-            userDescription: "A hike from the town of St. Arnaud to Angelus Hut via the Cascade Route."
+            userDescription: "A hike from the town of St. Arnaud to Angelus Hut via the Cascade Route.",
+            stops: []
         )
         
         return route
@@ -37,7 +38,8 @@ extension Route {
             from: geoJSON.features.first!.geometry,
             name: "Tongariro Alpine Crossing",
             creationDate: Date(),
-            userDescription: "A moderately challenging day walk in UNESCO World Heritage Site Tongariro National Park."
+            userDescription: "A moderately challenging day walk in UNESCO World Heritage Site Tongariro National Park.",
+            stops: []
         )
         
         return route
