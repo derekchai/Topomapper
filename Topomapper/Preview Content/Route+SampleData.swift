@@ -24,6 +24,11 @@ extension Route {
             stops: []
         )
         
+        route.stops = [
+            route.waypoints.first!.coordinate,
+            route.waypoints.last!.coordinate
+        ]
+        
         return route
     }
     
@@ -41,6 +46,11 @@ extension Route {
             userDescription: "A moderately challenging day walk in UNESCO World Heritage Site Tongariro National Park.",
             stops: []
         )
+        
+        route.stops = [
+            route.waypoints.first!.coordinate,
+            route.waypoints.last!.coordinate
+        ]
         
         return route
     }
