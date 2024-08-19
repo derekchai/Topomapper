@@ -15,9 +15,11 @@ struct RoutePathEditingView: View {
     var body: some View {
         VStack(alignment: .leading) {
             List {
-                ForEach($route.stops, id: \.self, editActions: .all) { stop in
-                    StopListItem(stop: stop.wrappedValue.description)
-                        .listRowSeparator(.hidden)
+                Section("Stops") {
+                    ForEach($route.stops, id: \.self, editActions: .all) { stop in
+                        StopListItem(stop: stop.wrappedValue.description)
+                            .listRowSeparator(.hidden)
+                    }
                 }
             }
             .scrollContentBackground(.hidden)
@@ -26,7 +28,8 @@ struct RoutePathEditingView: View {
                 .foregroundStyle(.secondary)
                 .padding()
         }
-            .navigationTitle("\(route.name) — Editing Path")
+        .navigationTitle("\(route.name) — Editing Path")
+        .background(.background)
     }
 }
 
