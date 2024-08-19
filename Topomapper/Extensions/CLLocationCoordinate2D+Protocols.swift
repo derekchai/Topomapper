@@ -47,3 +47,8 @@ extension CLLocationCoordinate2D: @retroactive Equatable {
     }
 }
 
+extension CLLocationCoordinate2D: @retroactive CustomStringConvertible {
+    public var description: String {
+        return "(\(self.latitude), \(self.longitude))"
+    }
+}
