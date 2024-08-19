@@ -29,7 +29,6 @@ struct RouteDetailView: View {
                     ToolbarItem {
                         Toggle(
                             isOn: $isEditingRoutePath
-                                .animation()
                         ) {
                             Label("Edit Route path", image: "path.edit")
                         }
