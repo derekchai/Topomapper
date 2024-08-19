@@ -36,6 +36,7 @@
 		A8E130E62C630B9300F8BD6A /* AngelusHut.geojson in Resources */ = {isa = PBXBuildFile; fileRef = A8E130E52C630B9300F8BD6A /* AngelusHut.geojson */; };
 		A8E130E82C6312C000F8BD6A /* GeoJSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E130E72C6312C000F8BD6A /* GeoJSONDecoder.swift */; };
 		A8E130EF2C631ED500F8BD6A /* TongariroCrossing.geojson in Resources */ = {isa = PBXBuildFile; fileRef = A8E130EE2C631ED500F8BD6A /* TongariroCrossing.geojson */; };
+		A8EDA9BA2C72C6E900C283BA /* RoutePathEditingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EDA9B92C72C6E900C283BA /* RoutePathEditingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		A8E130E52C630B9300F8BD6A /* AngelusHut.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = AngelusHut.geojson; sourceTree = "<group>"; };
 		A8E130E72C6312C000F8BD6A /* GeoJSONDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoJSONDecoder.swift; sourceTree = "<group>"; };
 		A8E130EE2C631ED500F8BD6A /* TongariroCrossing.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = TongariroCrossing.geojson; sourceTree = "<group>"; };
+		A8EDA9B92C72C6E900C283BA /* RoutePathEditingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutePathEditingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,7 +208,7 @@
 				A8E130D02C61A98500F8BD6A /* Shared */,
 				A8B9402E2C604DE000259870 /* ContentView.swift */,
 				A8B9405A2C60507B00259870 /* RoutesSidebarView.swift */,
-				A8B9405E2C605BC500259870 /* RouteContentView.swift */,
+				A8EDA9BB2C72C6EF00C283BA /* Route Content */,
 				A80774892C65840C00405FCE /* Route Detail */,
 			);
 			path = "User Interface";
@@ -257,6 +259,15 @@
 				A8E130E52C630B9300F8BD6A /* AngelusHut.geojson */,
 			);
 			path = "Sample GeoJSON";
+			sourceTree = "<group>";
+		};
+		A8EDA9BB2C72C6EF00C283BA /* Route Content */ = {
+			isa = PBXGroup;
+			children = (
+				A8B9405E2C605BC500259870 /* RouteContentView.swift */,
+				A8EDA9B92C72C6E900C283BA /* RoutePathEditingView.swift */,
+			);
+			path = "Route Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -398,6 +409,7 @@
 				A8B9402F2C604DE000259870 /* ContentView.swift in Sources */,
 				A8B9405B2C60507B00259870 /* RoutesSidebarView.swift in Sources */,
 				A8B9405D2C60526300259870 /* RouteDetailView.swift in Sources */,
+				A8EDA9BA2C72C6E900C283BA /* RoutePathEditingView.swift in Sources */,
 				A8E130E82C6312C000F8BD6A /* GeoJSONDecoder.swift in Sources */,
 				A8B940682C605E7600259870 /* Waypoint.swift in Sources */,
 				A8B940622C605C2900259870 /* Route.swift in Sources */,

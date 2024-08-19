@@ -13,6 +13,7 @@ struct RouteDetailView: View {
     
     // MARK: - Exposed Properties
     @Binding var route: Route
+    @Binding var isEditingRoutePath: Bool
     
     // MARK: - Internal Properties
     /// Whether ``RouteDetailView`` is showing the Edit Route path card.
@@ -27,7 +28,7 @@ struct RouteDetailView: View {
                 .toolbar {
                     ToolbarItem {
                         Toggle(
-                            isOn: $isShowingEditRoutePathCard
+                            isOn: $isEditingRoutePath
                                 .animation()
                         ) {
                             Label("Edit Route path", image: "path.edit")
@@ -70,5 +71,8 @@ struct EditRoutePathTip: Tip {
 
 // MARK: - Preview
 #Preview {
-    RouteDetailView(route: .constant(Route.angelusHut))
+    RouteDetailView(
+        route: .constant(Route.angelusHut),
+        isEditingRoutePath: .constant(false)
+    )
 }
